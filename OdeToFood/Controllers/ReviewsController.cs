@@ -9,6 +9,16 @@ namespace OdeToFood.Controllers
 {
     public class ReviewsController : Controller
     {
+        [ChildActionOnly]
+        public ActionResult BestReview()
+        {
+            var bestReview = from r in _reviews
+                             orderby r.Rating descending
+                             select r;
+
+            return PartialView("_Review", bestReview.First());
+        }
+
         // GET: Reviews
         public ActionResult Index()
         {
@@ -53,7 +63,7 @@ namespace OdeToFood.Controllers
         {
             var review = _reviews.Single(r => r.Id == id);
 
-            return View();
+            return View(review);
         }
 
         // POST: Reviews/Edit/5
