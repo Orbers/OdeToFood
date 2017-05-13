@@ -11,7 +11,9 @@ namespace OdeToFood
             bundles.Add(new ScriptBundle("~/bundles/otf").Include(
                        "~/Scripts/jquery.validate*", 
                        "~/Scripts/jquery-{version}.js", 
-                       "~/Scripts/jquery-ui-{version}.js"));
+                       "~/Scripts/jquery-ui-{version}.js",
+                       "~/Scripts/jquery.validate.unobtrusive*",
+                       "~/Scripts/jquery.unobtrusive*"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));

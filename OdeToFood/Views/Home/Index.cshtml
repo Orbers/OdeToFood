@@ -24,14 +24,5 @@
     }
 </div>
 
-<div id="restaurantList">
-    @foreach (var item in Model)
-    {
-        <div class="restaurant">
-            <h4>@item.Name</h4>
-            <div>@item.City, @item.Country</div>
-            <div>Reviews: @item.CountOfReviews</div>
-            <hr />
-        </div>
-    }
-</div>
+
+@Html.Partial("_Restaurants", Model)
