@@ -32,14 +32,16 @@
         </div>
     </div>
     <div class="container body-content">
-        @RenderSection("featured", required:false)
-        @RenderBody()
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
         <hr />
     </div>
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+
 
     @Scripts.Render("~/bundles/otf")
     @Scripts.Render("~/bundles/bootstrap")
